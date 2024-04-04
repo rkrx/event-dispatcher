@@ -12,10 +12,12 @@ interface EventDispatcherInterface
     /**
      * Provide all relevant listeners with an event to process.
      *
-     * @param object $event
+     * @template T of object
+     *
+     * @param T $event
      *   The object to process.
      *
-     * @return object
+     * @return T
      *   The Event that was passed, now modified by listeners.
      */
     public function dispatch(object $event);
